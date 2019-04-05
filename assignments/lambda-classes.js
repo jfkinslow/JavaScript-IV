@@ -101,6 +101,7 @@ const cam= new Instructor({
         'JavaScript'
     ]
   });
+  
 
   joshuak.speak();
   joshuak.listSubjects();
