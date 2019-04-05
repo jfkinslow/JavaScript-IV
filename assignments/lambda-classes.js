@@ -68,8 +68,8 @@ class ProjectManager extends Instructor {
     }
 }
 
-const josh = new Instructor({
-    name: 'Josh Knell',
+const cam= new Instructor({
+    name: 'Cameron Pope',
     location: 'Bedrock',
     age: 37,
     gender: 'male',
@@ -77,8 +77,8 @@ const josh = new Instructor({
     specialty: 'Front-end',
     catchPhrase: `Don't forget the homies`
   });
-  const nick = new ProjectManager({
-    name: 'Nick Stricker',
+  const dil = new ProjectManager({
+    name: 'Dil Sombayeva',
     location: 'Bedrock',
     age: 37,
     gender: 'male',
@@ -86,7 +86,7 @@ const josh = new Instructor({
     specialty: 'Front-end',
     catchPhrase: `Don't forget the homies`,
     gradClassName: `Web18`,
-    favInstructor: `Josh Knell`
+    favInstructor: `Cameron Pope`
   });
   const joshuak = new Student({
     name: 'Joshua Kinslow',
@@ -104,12 +104,12 @@ const josh = new Instructor({
 
   joshuak.speak();
   joshuak.listSubjects();
-  josh.demo('JavaScript-IV');
+  cam.demo('JavaScript-IV');
   joshuak.PRAssignment('JavaScript-IV');
-  nick.debugCode(joshuak, 'JavaScript-IV');
-  nick.standUp('web18_nick');
-  josh.grade(joshuak, 'JavaScript-IV');
-  console.dir(josh);
-  console.dir(nick);
+  dil.debugCode(joshuak, 'JavaScript-IV');
+  dil.standUp('webpt5_dil');
+  cam.grade(joshuak, 'JavaScript-IV');
+  console.dir(cam);
+  console.dir(dil);
   console.dir(joshuak);
   

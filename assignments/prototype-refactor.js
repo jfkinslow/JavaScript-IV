@@ -18,7 +18,8 @@ Prototype Refactor
 */
   
 function getRandomInt(max) {
-    return Math.floor(((Math.random() * Math.floor(max)) * 3) / 2 );
+    let min = 1
+    return (Math.round(Math.random()) * max - min);
   }
   
   /*
@@ -55,11 +56,9 @@ function getRandomInt(max) {
         this.vitality = object.vitality;
         this.dead = false;
     }
+
     takeDamage(from) {
-        let damage = Math.floor((getRandomInt(20) * from.strength) / 2);
-        if (damage == NaN){
-            damage = 2;
-        }
+        let damage = 20
             // console.log(damage);
         if (this.healthPoints - damage <= 0){
             console.log(`${this.name} took ${damage} damage from ${from.name} and has died.`);
@@ -233,11 +232,14 @@ function getRandomInt(max) {
       if(mage.dead || swordsman.dead){
         break;
       } else {
-        mage.attack(swordsman);
-      }
-      if(mage.dead || swordsman.dead){
-        break;
-      } else {
-        swordsman.attack(mage);
+        let turn = Math.round(Math.random());
+        // console.log(`turn = ${turn}`);
+        switch(turn) {
+          case 0:
+            mage.attack(swordsman);
+          case 1:
+            swordsman.attack(mage);
+        }
+
       }
     }
