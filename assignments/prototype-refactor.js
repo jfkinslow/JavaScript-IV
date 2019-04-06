@@ -56,6 +56,7 @@ function getRandomInt(max) {
         this.vitality = object.vitality;
         this.dead = false;
     }
+    
 
     takeDamage(from) {
         let damage = 20
